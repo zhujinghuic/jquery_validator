@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新增客户</title>
+</head>
+<body class="gray-bg">
+    <div class="wrapper-content animated fadeInRight">
+   		 <form class="form-horizontal m-t"  id="add_form" onsubmit="return addWebClient(this)">
+   		 		<div class="form-group">
+   		 			<label class="col-sm-2 control-label">*姓名：</label>
+   		 			<div class="col-sm-3">
+   		 				<input name="realName"   data-required  type="text" class="form-control" ></input>
+   		 			</div>
+   		 		</div>
+   		 		<div class="form-group">
+   		 			<label class="col-sm-2 control-label">*性别：</label>
+   		 			<div class="col-sm-3">
+   		 				<select name="gender" data-required class="form-control" >
+   		 					<option value="1" >男</option>
+                            <option value="2" >女</option>
+                        </select>
+   		 			</div>
+   		 		</div>
+   		 		<div class="form-group">
+   		 			<label class="col-sm-2 control-label">*联系电话：</label>
+   		 			<div class="col-sm-3">
+   		 				<input name="cellphone"  data-required data-type="phonenumber"  type="text" class="form-control"></input>
+   		 			</div>
+   		 		</div>
+   		 		<div class="form-group">
+   		 			<label class="col-sm-2 control-label">*所属学校：</label>
+   		 			<div class="col-sm-3">
+   		 				<input name="schoolName"  data-required type="text" class="form-control"></input>
+   		 				<input name="schoolId"  type="hidden" class="form-control"></input>
+   		 			</div>
+   		 		</div>
+   		 		<div class="form-group">
+   		 			<label class="col-sm-2 control-label">电子邮箱：</label>
+   		 			<div class="col-sm-3">
+   		 				<input name="email"  data-type="email"  type="text" class="form-control"></input>
+   		 			</div>
+   		 		</div>
+   		 		<div class="form-group">
+   		 			<label class="col-sm-2 control-label">联系人：</label>
+   		 			<div class="col-sm-3">
+   		 				<input name="contact" type="text" class="form-control"></input>
+   		 			</div>
+   		 		</div>
+   		 		<div class="form-group">
+   		 			<label class="col-sm-2 control-label">备注：</label>
+   		 			<div class="col-sm-3">
+   		 				<textarea name="remark" rows="5" cols="20" class="form-control"></textarea>
+   		 			</div>
+   		 		</div>
+    		 	<div class="form-group text-center">
+    		 		<button class="btn btn-primary" id="saveBtn" type="submit">提交</button>
+    		 	</div>
+   		 </form>
+    </div>
+</body>
+<script src="jquery.min.js"></script>
+<script src="fm.validator.js"></script>
+<script>	
+	function addWebClient(form){
+		//通用验证
+		//在标签中加入对应属性则可以起效
+		//详情请参照fm.validator.js插件说明
+		if (Validator.validate_data(form)) {
+			alert("添加成功!");
+		}
+		return false;
+	}		
+</script>
+</html>

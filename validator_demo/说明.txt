@@ -1,0 +1,6 @@
+该插件修改于http://www.jq22.com/jquery-info743原作者，
+在原来功能上进行修复某个bug和拓展功能。
+可实现弹窗或样式错误信息
+更改属性showErrorType  ： 'info' : 样式式错误   'dialog' : 弹窗式错误
+                            					--by 小山
+								qq:2258053394                             
